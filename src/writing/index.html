@@ -1,0 +1,22 @@
+---
+title: Writing
+permalink: /writing/
+layout: default
+---
+
+<section id="writing-index">
+  <h1>Writing</h1>
+
+  <ul class="writing-list">
+    {% assign all = site.writing | sort: "date" | reverse %}
+    {% for item in all %}
+      <li>
+        <time class="date" datetime="{{ item.date | date_to_xmlschema }}">
+          {{ item.date | date: "%Y-%m-%d" }}
+        </time>
+        &nbsp;
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,153 @@
+:root { --fg:#222; --muted:#666; --bg:#fbfaf6; --accent:#0b66ff; }
+html { scroll-behavior: smooth; } /* smooth anchor scrolling */
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+       font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+
+.wrap { display:grid; grid-template-columns: 220px 1fr; gap:24px; max-width:1100px; margin:0 auto; padding:24px; }
+.leftnav { position: sticky; top:24px; align-self: start; }
+.nav a { display:block; margin:6px 0; text-decoration:none; color:inherit; opacity:.85; }
+.nav a:hover { opacity:1; }
+.nav hr { border:0; border-top:1px solid #e9e6e0; margin:12px 0; }
+.content h1, .content h2 { margin: 0.6em 0 0.25em; line-height:1.2; }
+
+.card { background:#fff; border-radius:14px; padding:16px; border:1px solid #eee; }
+.list { display:grid; gap:12px; }
+
+.footer { margin-top:48px; opacity:.7; }
+/* ---------- Base: calm system sans + narrow measure ---------- */
+:root {
+  --fg:#1a1a1a;
+  --muted:#6b6b6b;
+  --bg:#fbfaf6;
+  --accent:#0b66ff;
+  --hairline: rgba(0,0,0,.08);
+  --maxw: 72ch;              /* column width like Steph */
+}
+
+html { scroll-behavior:smooth; }
+* { box-sizing:border-box; }
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font: 17px/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Links: understated, always underlined */
+a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+a:hover { color: var(--accent); }
+
+/* Sections: narrow and evenly spaced */
+.sa-section { max-width: var(--maxw); margin: 0 auto; padding: 2.25rem 1rem; }
+.sa-h1 { font-size: clamp(1.75rem, 2.2vw, 2.25rem); margin:0 0 1rem; letter-spacing:-.01em; }
+.sa-h2 { font-size: clamp(1.25rem, 1.6vw, 1.5rem); margin:0 0 1rem; letter-spacing:-.01em; font-weight:700; }
+
+/* Hairline list separators */
+.sa-list { list-style:none; margin:0; padding:0; border-top:1px solid var(--hairline); }
+.sa-item { padding:1.25rem 0; border-bottom:1px solid var(--hairline); }
+
+/* Titles + deks */
+.sa-title { margin:0 0 .25rem; font-weight:700; letter-spacing:-.01em; }
+.sa-dek { margin:.25rem 0 0; color:var(--muted); }
+
+/* Bullets when present */
+.sa-bullets { margin:.5rem 0 0; padding-left:1.25rem; }
+.sa-bullets li { margin:.25rem 0; }
+
+/* Inline link rows (title lines that are links) */
+.sa-linkline { text-decoration:none; display:inline; }
+.sa-linkline:hover { text-decoration:underline; }
+
+/* “see all” */
+.sa-see-all { margin-top:.75rem; }
+
+/* ---------- Bio layout ---------- */
+#home { 
+  display:grid; 
+  grid-template-columns: 1fr 320px; 
+  gap:28px; 
+  align-items:center; 
+}
+.bio-photo { margin:0; }
+#home img {
+  width:100%;
+  max-width:360px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+}
+
+/* Link row under bio */
+.bio-links { display:flex; gap:16px; margin:1rem 0 0; padding:0; list-style:none; }
+.bio-links a { text-decoration: underline; }
+
+/* Stack on mobile */
+@media (max-width: 800px) {
+  #home { grid-template-columns: 1fr; }
+  #home img { max-width: 280px; margin: 0 auto; }
+}
+
+/* ---------- Experiences: reuse your grid but with hairlines ---------- */
+.xp-list { /* already wrapped in .sa-list for separators */ }
+.xp {
+  display:grid;
+  grid-template-columns: 1fr minmax(220px, 280px);
+  gap:16px;
+  align-items:start;
+}
+.xp-body h3 { margin:0 0 6px; font-size:1.05rem; }
+.xp-summary { color:var(--muted); }
+.xp-links { margin:.5rem 0 0; color:var(--muted); }
+.sa-sep { color:var(--muted); }
+
+.xp-media { margin:0; }
+.xp-media img { width:100%; height:100%; max-height:180px; object-fit:cover; border-radius:10px; display:block; }
+
+@media (max-width: 720px) {
+  .xp { grid-template-columns:1fr; }
+  .xp-media img { max-height:220px; }
+}
+
+/* ---------- Writing list like Steph: date + title per line ---------- */
+.writing-list { list-style:none; margin:0; padding:0; border-top:1px solid var(--hairline); }
+.writing-list li { display:flex; gap:.75rem; align-items:baseline; padding:.65rem 0; border-bottom:1px solid var(--hairline); }
+.writing-list .date { color:#888; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:.95rem; min-width:8.5ch; }
+
+/* ---------- Projects / Research / Volunteering inherit sa-list ---------- */
+.projects-list .title { font-weight:600; }
+.projects-list .summary { color:var(--muted); }
+.research-list .summary { color:var(--muted); }
+.meta { color:var(--muted); font-size:.95rem; }
+
+/* ---------- Featured (kept as-is, just matches tone) ---------- */
+#featured { margin-block: 2rem; }
+.featured-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:1.25rem; }
+.featured-card { border:1px solid var(--hairline); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.5rem; background:#fff; }
+.featured-meta { display:flex; gap:.5rem; align-items:center; font-size:.9rem; color:#666; }
+.badge { text-transform:uppercase; font-size:.7rem; padding:.15rem .4rem; border-radius:999px; border:1px solid currentColor; }
+.badge-competition { color:#0b5; } .badge-article { color:#06c; } .badge-scholarship { color:#b50; }
+.featured-title { font-weight:600; text-decoration:none; }
+.featured-org { font-size:.95rem; color:#444; }
+.featured-thumb img { width:100%; height:auto; border-radius:8px; display:block; }
+.featured-blurb { margin:0; color:#222; line-height:1.5; }
+
+.featured-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* enforce 4:3 ratio */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.featured-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* crop instead of stretching */
+  display: block;
+}
+
+/* ---------- Remove unused card/leftnav chrome if present ---------- */
+.wrap, .leftnav, .card, .list { /* keep existing if other pages rely on them */ }
