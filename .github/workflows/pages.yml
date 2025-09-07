@@ -1,0 +1,61 @@
+name: Build & Deploy to GitHub Pages
+
+# ------------- TRIGGERS -------------
+on:
+  push:
+    branches: [ "main" ]          # after a PR merges into main, do a prod deploy
+  pull_request:                    # on PRs, just build to catch errors (no deploy)
+  workflow_dispatch:               # allow manual runs from the Actions tab
+
+# ------------- PERMISSIONS -------------
+permissions:
+  contents: read                   # read repo
+  pages: write                     # publish to Pages
+  id-token: write                  # required by the deploy step
+
+# ------------- AVOID DUPLICATES -------------
+concurrency:
+  group: "pages"                   # only keep the newest run for this workflow
+  cancel-in-progress: true
+
+jobs:
+  # ===== BUILD JOB (runs for PRs and pushes) =====
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Pulls  repo into the runner so actions can see files
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+       # Preps the Pages environment (base path, etc.)
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      # Runs Jekyll (using your Gemfile if present) and writes a static site to ./_site
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          # Site content lives in ./src
+          source: ./src
+          # Where to put the built site on the runner
+          destination: ./_site
+
+      # Stores ./_site as a build artifact    
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site            # upload the built site as an artifact
+
+  # ===== DEPLOY JOB (only for push -> main) =====
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build                   # wait for build to finish and provide artifact
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages           # special Pages environment
+      url: ${{ steps.deployment.outputs.page_url }}  # final URL shown in job summary
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # This takes the uploaded artifact from the build job and publishes it
