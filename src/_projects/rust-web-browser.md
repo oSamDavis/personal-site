@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Browser From Scratch
-summary: Curiosity-driven project dive into how the web works by reimplementing a minimal browser from scratch in Rust.
+summary: Curiosity-driven project dive into how the web works by implementing a minimal browser from scratch using Rust.
 date: 2025-07-01
 weight: 1
 cover: /assets/projects/browser/cover.png   # optional

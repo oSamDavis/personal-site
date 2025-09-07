@@ -13,5 +13,5 @@ links:
   - { text: "Chrome Blog", url: "https://developer.chrome.com/blog/gap-decorations" }
   - { text: "Change I’m Proud Of", url: "https://chromium-review.googlesource.com/c/chromium/src/+/6773829" }
 image: "/assets/images/wb-platt.jpg"
-image_alt: "Slides and code snippets from Blink/Chromium work"
+image_alt: "Badge from BlinkOn 20 conference"
 ---

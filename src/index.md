@@ -24,7 +24,7 @@ title: Home
       <li><a href="https://www.linkedin.com/in/samdavisomekara" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://github.com/oSamDavis" target="_blank" rel="noopener">GitHub</a></li>
       <li><a href="mailto:osamdavis@example.com">Email</a></li>
-      <li><a href="https://drive.google.com/file/d/1gBXvxVPVi-I01snW3egllI_ieLM6EXQ2/view?usp=drive_link">Resume</a></li>
+      <li><a href="https://drive.google.com/file/d/1QePGeSlVErEXBecMGDeJLZkjKM0Sz9_h/view?usp=sharing">Resume</a></li>
     </ul>
 
   </div>

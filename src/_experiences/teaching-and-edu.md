@@ -9,5 +9,5 @@ bullets:
   - "Partnered with Village Book Builders and QUADW Missions to mentor high school students in Chebosi, Kenya — developing a fun curriculum to strengthen their English through language games"
 links: []
 image: "/assets/images/teach.jpg"
-image_alt: "Whiteboard with math and programming notes"
+image_alt: "Sam teaching Math on Whiteboard in 2020"
 ---

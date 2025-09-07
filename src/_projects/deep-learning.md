@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Deep Learning from the Ground Up
-summary:  Understanding Deep Learning from the ground up. From Perceptron to Frontier models.
+summary: Dive into deep learning concepts, from perceptron to frontier models.
 weight: 2
 date: 2025-06-20
 cover: /assets/projects/deeplearning/cover.png

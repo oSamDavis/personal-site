@@ -12,5 +12,5 @@ links:
   - { text: "Rarity Bead", url: "https://www.instagram.com/raritybead/" }
   - { text: "NakAttack", url: "https://www.instagram.com/nakattackk/" }
 image: "/assets/images/comm.jpg"
-image_alt: "Community event collage"
+image_alt: "Sam, with friends at an art community event."
 ---
