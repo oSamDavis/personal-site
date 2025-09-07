@@ -1,0 +1,19 @@
+{% if page.url == "/" %}
+  <!-- Full Navbar (for Home page) -->
+  <nav class="nav">
+    <a href="{{ '#home' | relative_url }}">Home</a>
+    <hr />
+    <a href="#experiences">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#research">Research</a>
+    <a href="#volunteering">Volunteering</a>
+    <a href="#writing">Writing</a>
+    <a href="#featured">Featured</a>
+  </nav>
+{% else %}
+  <!-- Minimal Navbar (for all other pages) -->
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <hr />
+  </nav>
+{% endif %}

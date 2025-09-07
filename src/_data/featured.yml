@@ -1,0 +1,84 @@
+# _data/featured.yml
+
+# Listed in reverse chrono order.
+
+- kind: article
+  title: "CSS Gap Decorations"
+  org: "Hey Designer"
+  date: 2025-07-01
+  href: "https://heydesigner.com/n/product-design-2025/"
+  blurb: >
+    CSS Gap Decorations project featured in the July edition of HeyDesigner magazine.
+  image: "/assets/images/hey-designer.jpeg"
+
+- kind: article
+  title: "CSS Gap Decorations"
+  org: "Chrome Dev Blog"
+  date: 2025-06-11
+  href: "https://developer.chrome.com/blog/gap-decorations"
+  blurb: >
+    Wrote and published an article on the CSS Gap Decorations feature highly requested by web developers.
+  image: "/assets/images/chrm.jpeg"
+
+- kind: speaker
+  title: "AAAS - Speaker"
+  org: "AAAS"
+  date: 2024-09-10
+  href: "https://iie.aaas.org/2024-showcase-1"
+  blurb: >
+    Invited to speak to HBCU college students on STEM career trajectory and prospects.
+  image: "/assets/images/AAAS-spk.jpg"
+
+- kind: competition
+  title: "Student Winner"
+  org: "Pathway Community Foundation"
+  date: 2023-02-10
+  href: "https://www.linkedin.com/posts/pathwayoz_an-exciting-showcase-of-hbcu-students-traveling-activity-7036037885740900352-wyX0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC096gsBNe0Zwro45c3QNcFenM8tTn__-Zw"
+  blurb: >
+    Awarded 2nd place in national compettion aimed to help the city of Winston Salem connect more with residents.
+  image: "/assets/images/smrt-cities.jpeg"
+
+- kind: scholarship
+  title: "Acxiom scholarship"
+  org: "Acxiom"
+  date: 2022-07-19
+  href: "https://www.businesswire.com/news/home/20220719005307/en/Acxiom-Awards-Diversity-Scholarships-to-10-College-Students"
+  blurb: >
+    1 of 10 students awarded a scholarship by Acxiom aimed at recognizing students who have shown prowess in their pursuit of higher education.
+  image: "/assets/images/acxiom.png"
+
+- kind: competition
+  title: "Disney On The Yard Hackathon"
+  org: "Disney"
+  date: 2022-11-15
+  href: "https://www.linkedin.com/posts/philander-smith-university_disneyontheyard-activity-7017256544304054272-03_f?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC096gsBNe0Zwro45c3QNcFenM8tTn__-Zw"
+  blurb: >
+    Placed 1st place in the national Disney on the Yard Hackathon for proposing an initiative that sees Disney utilize emerging technologies to bolster the sense of community among remote employees.
+  image: "/assets/images/disney.jpeg"
+
+- kind: competition
+  title: "AAAS - Student Winner"
+  org: "Acxiom"
+  date: 2022-09-10
+  href: "https://iie.aaas.org/2022-showcase"
+  blurb: >
+    Placed 2nd nationally for solution, EcoHome, which focuses on smart home management aimed to address UN SDG 11: Sustainable cities and communities.
+  image: "/assets/images/AAAS-stdnt.jpeg"
+
+- kind: scholarship            # competition | press | award
+  title: "Dell Success scholarship"
+  org: "Dell Technologies"
+  date: 2022-03-20
+  href: "https://www.linkedin.com/posts/franziska-masche_students-diversity-equity-activity-6915039358718775296-L2T-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC096gsBNe0Zwro45c3QNcFenM8tTn__-Zw"
+  blurb: >
+    1 of 12 students awarded the Dell Success Scholarship for academic excellence during undergraduate studies.
+  image: "/assets/images/dell.jpg"   # optional
+
+- kind: competition
+  title: "Zillow Housing Hackathon"
+  org: "Zillow"
+  date: 2021-10-11
+  href: "https://www.zillowgroup.com/news/announcing-the-winners-of-zillows-first-hbcu-hackathon/"
+  blurb: >
+    Placed 3rd in Zillow hackathon for prototyping a solution that reimagined the future of real estate investments through tokenization of assets.
+  image: "/assets/images/zillow.jpg"

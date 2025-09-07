@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article class="project">
+  <header class="project-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}<p class="meta">{{ page.date | date: "%B %-d, %Y" }}</p>{% endif %}
+    {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
+  </header>
+
+  <section class="content" style="min-height:60vh; display:grid; place-items:center;">
+    <h2>Coming soon…</h2>
+  </section>
+
+</article>
